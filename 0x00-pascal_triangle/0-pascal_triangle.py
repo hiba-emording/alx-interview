@@ -5,9 +5,9 @@
 def pascal_triangle(n):
     '''
     Generates Pascal's Triangle up to a given number of rows.
-    
+
     Args:
-        rows (int): The number of rows of Pascal's Triangle to generate.
+        n (int): The number of rows of Pascal's Triangle to generate.
 
     Returns:
         list of list of int: A list of lists where each inner list
@@ -18,7 +18,7 @@ def pascal_triangle(n):
     triangle = []
     if not isinstance(n, int) or n <= 0:
         return triangle
-    
+
     for row_index in range(n):
         current_row = []
         for col_index in range(row_index + 1):
@@ -26,9 +26,9 @@ def pascal_triangle(n):
                 current_row.append(1)
             else:
                 current_row.append(
-                    triangle[row_index - 1][col_index - 1] + 
+                    triangle[row_index - 1][col_index - 1] +
                     triangle[row_index - 1][col_index]
                 )
         triangle.append(current_row)
-    
+
     return triangle
