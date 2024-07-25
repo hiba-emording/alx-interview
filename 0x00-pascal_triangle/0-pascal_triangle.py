@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''Pascal's triangle'''
+'''A module for Pascal's triangle'''
 
 
-def pascal_triangle(rows):
+def pascal_triangle(n):
     '''
     Generates Pascal's Triangle up to a given number of rows.
     
@@ -16,10 +16,10 @@ def pascal_triangle(rows):
     '''
 
     triangle = []
-    if not isinstance(rows, int) or rows <= 0:
+    if not isinstance(n, int) or n <= 0:
         return triangle
     
-    for row_index in range(rows):
+    for row_index in range(n):
         current_row = []
         for col_index in range(row_index + 1):
             if col_index == 0 or col_index == row_index:
