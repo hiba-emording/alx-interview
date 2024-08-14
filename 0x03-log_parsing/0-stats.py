@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''parsing HTTP request logs'''
 import sys
 import signal
